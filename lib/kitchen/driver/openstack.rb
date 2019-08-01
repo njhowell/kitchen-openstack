@@ -98,7 +98,7 @@ module Kitchen
         end
         state[:hostname] = get_ip(server)
         wait_for_server(state)
-        add_ohai_hint(state)
+        
       rescue Fog::Errors::Error, Excon::Errors::Error => ex
         raise ActionFailed, ex.message
       end
